@@ -41,6 +41,10 @@ body {
       font-size: 5rem;
       font-weight: 700;
     }
+
+    .coming-soon-header {
+      color: $secondary-color;
+    }
     
   }
 
@@ -122,9 +126,14 @@ body {
         list-style-type: none;
       }
       
+      li {
+        padding-bottom: 0.25rem;
+      }
+
       li::before {
-        color: $success-color;
-        content: '\f023';
+        color: $primary-color;
+        content: '\2713';
+        font-weight: bolder;
         margin-right: 1rem;
         
       }
