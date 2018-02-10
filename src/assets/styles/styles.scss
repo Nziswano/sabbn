@@ -4,7 +4,7 @@
 $body-font: 'Open Sans', sans-serif;
 $header-font: 'Cabin', sans-serif;
 $quote-font: 'Baloo', cursive;
-$background-color: rgba($secondary-color, 0.2);
+$background-color: rgba($secondary-color, 0.1);
 
 body {
   background: $background-color url('../images/_9080033.png') no-repeat fixed center;
@@ -13,7 +13,8 @@ body {
 }
 
 .attribution {
-  font-size: 0.75rem;
+  font-size: 1rem;
+  font-weight: bolder;
   text-align: center;
 }
 
@@ -61,12 +62,20 @@ body {
     background-color: $background-color;
     border: 1px solid;
     border-radius: 5px;
-    box-shadow: 3px 4px 3px 3px rgba($secondary-color, 0.3);
+    box-shadow: 3px 4px 3px 3px rgba($secondary-color, 0.2);
     padding: 0.5rem;
 
     label {
       color: $secondary-color;
-      font-weight: bold;
+      font-size: 1.1rem;
+      font-weight: bolder;
+    }
+
+    label {
+      .required::after {
+        color: $warning-color;
+        content: '\002A';
+      }
     }
 
     input,
@@ -84,6 +93,16 @@ body {
       visibility: hidden;
     }
 
+    .help-text {
+      color: $warning-color;
+      font-size: 0.75rem;
+     
+      &::after {
+        color: $warning-color;
+        content: '\002A';
+      }
+    }
+
     
     .form-button {
       text-align: center;
@@ -92,6 +111,27 @@ body {
         border-radius: 5px;
         box-shadow: 2px 2px $dark-gray;
       }
+    }
+
+    &-result {
+      padding-top: 20vh;
+    }
+
+    .privacy {
+      ul {
+        list-style-type: none;
+      }
+      
+      li::before {
+        color: $success-color;
+        content: '\f023';
+        margin-right: 1rem;
+        
+      }
+    }
+
+    .hide {
+      display: none;
     }
 
   }
@@ -110,8 +150,8 @@ body {
     }
 
     .svg-inline--fa {
-      width: 2rem;
       margin-right: 1rem;
+      width: 2rem;
     }
   }
 }

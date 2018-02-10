@@ -32,25 +32,25 @@
         </div>
       </div>
 
-      <div class="cell large-5 large-offset-1 cn-sabbn-coming-soon-form">
-        <form>
+      <div class="cell large-5 large-offset-1 cn-sabbn-coming-soon-form" id="js-cn-sabbn-coming-soon-form">
+        <form id="js-coming-soon-form">
           <h2>Find out when we launch!</h2>
           <div class="grid-x grid-padding-x">
             <div class="large-6 cell">
-              <label>Name
-                <input type="text" name="name" id="name" value="" placeholder="Tom Masinga">
+              <label><span class="required">Name</span>
+                <input type="text" name="name" id="name" value="" placeholder="Tom Masinga" required>
               </label>
               <p class="error-text" id="nameErrorText">Your name is required!</p>
             </div>
             <div class="large-6 cell">
-              <label>Email
-                <input type="email" name="email" id="email" placeholder="myemail@gmail.com">
+              <label><span class="required">Email</span>
+                <input type="email" name="email" id="email" placeholder="myemail@gmail.com" required>
               </label>
               <p class="error-text" id="emailErrorText">Can't keep you informed without an email!</p>
             </div>
             <div class="large-6 cell">
-              <label>Telephone
-                <input type="tel" name="telephone" id="telephone" placeholder="+27 81 123-4564">
+              <label><span class="required">Telephone</span>
+                <input type="tel" name="telephone" id="telephone" placeholder="+27 81 123-4564" required>
               </label>
               <p class="error-text" id="telephoneErrorText">For sending you instant messages!</p>
             </div>
@@ -72,12 +72,13 @@
             <label for="networking">Networking</label>
             <input id="learning" name="learning" type="checkbox">
             <label for="learning">Learning</label>
-            <input id="mentoring" id="mentoring" type="checkbox">
+            <input id="mentoring" name="mentoring" type="checkbox">
             <label for="mentoring">Mentoring</label>
-            <input id="collaboration" id="collaboration" type="checkbox">
+            <input id="collaboration" name="collaboration" type="checkbox">
             <label for="collaboration">Collaboration</label>
             <p class="error-text" id="interestsErrorText">Choose so we can cater to your needs!</p>
           </fieldset>
+          <p class="help-text" id="interestsErrorText">Required</p>
           <div class="form-button">
           <button type="submit" class="button radius bordered shadow primary">Submit</button>
         </div>
@@ -92,7 +93,12 @@
             </ul>
           </div>
         </form>
+        <div class="cn-sabbn-coming-soon-form-result hide" id="js-cn-sabbn-coming-soon-form-result">
+            <h1>Thank you!</h1>
+    
+          </div>
       </div>
+
     </div>
   </section>
 </main>
