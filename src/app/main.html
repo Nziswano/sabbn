@@ -1,12 +1,104 @@
-<div class="grid-container fluid">
-  <div class="grid-x grid-margin-x">
-    <div class="cell large-6">
-      <h1>Left Side</h1>
-      <button class="button large secondary">Submit!</button>
+<main class="grid-container fluid cn-sabbn cn-sabbn-coming-soon">
+  <section class="grid-container fluid cn-sabbn-coming-soon-home" id="home">
+    <div class="grid-x grid-padding-x">
+      <div class="cell large-6 cn-sabbn-coming-soon-quote">
+        <h3>Coming Soon!</h3>
+        <h1>SABBN</h1>
+        <h2>South Africa Black Business Network</h2>
+        <blockquote>
+          <i class="fas fa-quote-left fa-2x fa-pull-left fa-border"></i>
+          What is black empowerment when it seems to benefit not the vast majority but an
+          elite that tends to be recycled?
+          <cite>Desmond Tutu</cite>
+        </blockquote>
+        <div class="grid-container cn-sabbn-coming-soon-services" id="about">
+          <h2>You get!</h2>
+          <ul class="no-bullet">
+            <li>
+              <i class="fas fas fa-user"></i>Free membership</li>
+            <li>
+              <i class="fas fa-handshake"></i>Networking</li>
+            <li>
+              <i class="fas fa-magnet"></i>Collaboration</li>
+            <li>
+              <i class="fas fa-calendar-alt"></i>Events</li>
+            <li>
+              <i class="fas fa-graduation-cap"></i>Tips and resources</li>
+            <li>
+              <i class="fas fa-sitemap"></i>Business Directory</li>
+            <li>
+              <i class="fas fa-globe"></i>Online community</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="cell large-5 large-offset-1 cn-sabbn-coming-soon-form">
+        <form>
+          <h2>Find out when we launch!</h2>
+          <div class="grid-x grid-padding-x">
+            <div class="large-6 cell">
+              <label>Name
+                <input type="text" name="name" id="name" value="" placeholder="Tom Masinga">
+              </label>
+              <p class="error-text" id="nameErrorText">Your name is required!</p>
+            </div>
+            <div class="large-6 cell">
+              <label>Email
+                <input type="email" name="email" id="email" placeholder="myemail@gmail.com">
+              </label>
+              <p class="error-text" id="emailErrorText">Can't keep you informed without an email!</p>
+            </div>
+            <div class="large-6 cell">
+              <label>Telephone
+                <input type="tel" name="telephone" id="telephone" placeholder="+27 81 123-4564">
+              </label>
+              <p class="error-text" id="telephoneErrorText">For sending you instant messages!</p>
+            </div>
+            <div class="large-6 cell">
+              <label>Your current status
+                <select name="status" id="status">
+                  <option value="">Choose...</option>
+                  <option value="owner">Have a business</option>
+                  <option value="entrepreneur">Want a business</option>
+                  <option value="other">Other</option>
+                </select>
+              </label>
+              <p class="error-text" id="statusErrorText">Help's us better serve you.</p>
+            </div>
+          </div>
+          <fieldset class="fieldset">
+            <legend>Interests</legend>
+            <input id="networking" name="networking" type="checkbox">
+            <label for="networking">Networking</label>
+            <input id="learning" name="learning" type="checkbox">
+            <label for="learning">Learning</label>
+            <input id="mentoring" id="mentoring" type="checkbox">
+            <label for="mentoring">Mentoring</label>
+            <input id="collaboration" id="collaboration" type="checkbox">
+            <label for="collaboration">Collaboration</label>
+            <p class="error-text" id="interestsErrorText">Choose so we can cater to your needs!</p>
+          </fieldset>
+          <div class="form-button">
+          <button type="submit" class="button radius bordered shadow primary">Submit</button>
+        </div>
+        <hr/>
+          <div class="privacy">
+            <h3>Privacy</h3>
+            <ul>
+              <li>We will not sell or rent your information.</li>
+              <li>We will not share your information without your permission.</li>
+              <li>We may contact you via email in the future with updates, events or services. </li>
+              <li>We take precautions to protect your information.</li>
+            </ul>
+          </div>
+        </form>
+      </div>
     </div>
-    <div class="cell large-6">
-      <h1>Right Side</h1>
-      <button class="button large secondary">Submit!</button>
-    </div>
-  </div>
-</div>
+  </section>
+</main>
+<footer class="grid-container fluid">
+  <ul class="menu align-center">
+    <li class="menu-text">Copyright &copy; 2018 South Africa Black Business Network</li>
+  </ul>
+  <p class="attribution">Images and Website by <a rel="nofollow" class="external text" href="https://www.johan-martin.com">Johan N. Martin</a></p>
+</footer>

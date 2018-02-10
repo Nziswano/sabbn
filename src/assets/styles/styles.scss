@@ -1,1 +1,123 @@
+@import url('https://fonts.googleapis.com/css?family=Baloo|Cabin:400,500,700|Open+Sans');
 @import 'foundation';
+
+$body-font: 'Open Sans', sans-serif;
+$header-font: 'Cabin', sans-serif;
+$quote-font: 'Baloo', cursive;
+$background-color: rgba($secondary-color, 0.2);
+
+body {
+  background: $background-color url('../images/_9080033.png') no-repeat fixed center;
+  color: $secondary-color;
+  font-family: $body-font;
+}
+
+.attribution {
+  font-size: 0.75rem;
+  text-align: center;
+}
+
+.cn-sabbn {
+ 
+  padding-top: 4rem;
+
+  &-coming-soon {
+    width: 80%;
+
+    h1,
+    h2,
+    h3 {
+      color: $primary-color;
+      text-align: center;
+    }
+    
+    h2,
+    h3 {
+      font-weight: 500;
+    }
+
+    h1 {
+      font-size: 5rem;
+      font-weight: 700;
+    }
+    
+  }
+
+  &-coming-soon-quote {
+    // background-color: $background-color;
+
+    blockquote {
+      border: 0;
+      color: $dark-gray;
+      font-family: $quote-font;
+      font-size: 2rem;
+      @include breakpoint(medium down) { 
+        font-size: 1.25rem;
+      }
+    }
+  }
+
+  &-coming-soon-form {
+    background-color: $background-color;
+    border: 1px solid;
+    border-radius: 5px;
+    box-shadow: 3px 4px 3px 3px rgba($secondary-color, 0.3);
+    padding: 0.5rem;
+
+    label {
+      color: $secondary-color;
+      font-weight: bold;
+    }
+
+    input,
+    select {
+      margin-bottom: 0.1rem;
+    }
+  
+    .fieldset {
+      padding-bottom: 0;
+    }
+  
+    .error-text {
+      color: $warning-color;
+      font-size: 0.75rem;
+      visibility: hidden;
+    }
+
+    
+    .form-button {
+      text-align: center;
+
+      button {
+        border-radius: 5px;
+        box-shadow: 2px 2px $dark-gray;
+      }
+    }
+
+  }
+
+  &-coming-soon-services {
+    ul {
+      margin-left: 10%;
+    }
+
+    .svg-inline--fa,
+    li {
+      font-size: 2rem;
+      @include breakpoint(medium down) { 
+        font-size: 1rem;
+      }
+    }
+
+    .svg-inline--fa {
+      width: 2rem;
+      margin-right: 1rem;
+    }
+  }
+}
+
+footer {
+  .menu {
+    margin-top: 2rem;
+  }
+}
