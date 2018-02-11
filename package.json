@@ -6,7 +6,7 @@
   "scripts": {
     "start": "npm-run-all -n -p dev:server",
     "dev": "npm-run-all -n -p dev:server lint:watch",
-    "dev:server": "cross-env webpack-dev-server --history-api-fallback --color --progress --hot --inline",
+    "dev:server": "cross-env webpack-dev-server --history-api-fallback --color --progress --hot --inline --host 0.0.0.0",
     "build": "npm-run-all -s build:webpack",
     "build:webpack": "cross-env NODE_ENV=production webpack --progress --hide-modules",
     "lint": "esw webpack.config.* src --color",
@@ -64,7 +64,7 @@
     "@fortawesome/fontawesome": "^1.1.3",
     "@fortawesome/fontawesome-free-solid": "^5.0.6",
     "@fortawesome/fontawesome-free-webfonts": "^1.0.3",
-    "axios": "^0.17.1",
+    "firebase": "^4.9.1",
     "foundation-sites": "^6.4.4-rc1",
     "webfontloader": "^1.6.28"
   },

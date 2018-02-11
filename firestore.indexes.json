@@ -10,5 +10,12 @@
   //     ]
   //   }
   // ]
-  "indexes": []
+  "indexes": [
+    {
+      "collectionId": "earlyAdopters",
+      "fields": [
+        {"fieldPath": "email", "mode": "ASCENDING"}
+      ]
+    }
+  ]
 }

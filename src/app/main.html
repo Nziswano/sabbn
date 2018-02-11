@@ -1,7 +1,7 @@
-<main class="grid-container fluid cn-sabbn cn-sabbn-coming-soon">
-  <section class="grid-container fluid cn-sabbn-coming-soon-home" id="home">
+<main class="cn-sabbn cn-sabbn-coming-soon">
+  <section class="cn-sabbn-coming-soon-home" id="home">
     <div class="grid-x grid-padding-x">
-      <div class="cell large-6 cn-sabbn-coming-soon-quote">
+      <div class="cell auto cn-sabbn-coming-soon-quote">
         <h3 class="coming-soon-header">Coming Soon!</h3>
         <h1>SABBN</h1>
         <h2>South Africa Black Business Network</h2>
@@ -32,29 +32,29 @@
         </div>
       </div>
 
-      <div class="cell large-5 large-offset-1 cn-sabbn-coming-soon-form" id="js-cn-sabbn-coming-soon-form">
+      <div class="cell large-6 cn-sabbn-coming-soon-form" id="js-cn-sabbn-coming-soon-form">
         <form id="js-coming-soon-form">
           <h2>Find out when we launch!</h2>
           <div class="grid-x grid-padding-x">
-            <div class="large-6 cell">
+            <div class="medium-12 cell">
               <label><span class="required">Name</span>
                 <input type="text" name="name" id="name" value="" placeholder="Tom Masinga" required>
               </label>
               <p class="error-text" id="nameErrorText">Your name is required!</p>
             </div>
-            <div class="large-6 cell">
+            <div class="medium-12 cell">
               <label><span class="required">Email</span>
                 <input type="email" name="email" id="email" placeholder="myemail@gmail.com" required>
               </label>
               <p class="error-text" id="emailErrorText">Can't keep you informed without an email!</p>
             </div>
-            <div class="large-6 cell">
+            <div class="medium-12 cell">
               <label><span class="required">Telephone</span>
                 <input type="tel" name="telephone" id="telephone" placeholder="+27 81 123-4564" required>
               </label>
               <p class="error-text" id="telephoneErrorText">For sending you instant messages!</p>
             </div>
-            <div class="large-6 cell">
+            <div class="medium-12 cell">
               <label>Your current status
                 <select name="status" id="status">
                   <option value="">Choose...</option>
@@ -80,7 +80,9 @@
           </fieldset>
           <p class="help-text" id="interestsErrorText">Required</p>
           <div class="form-button">
-          <button type="submit" class="button radius bordered shadow primary">Submit</button>
+              <div class="cn-sabbn-coming-soon-form-captcha" id="captcha-container"></div>
+          <button type="submit" class="button radius bordered shadow primary" id="js-cn-sabbn-coming-soon-form-submit-button" disabled>Submit</button>
+          
         </div>
         <hr/>
           <div class="privacy">

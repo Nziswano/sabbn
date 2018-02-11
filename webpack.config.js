@@ -110,6 +110,7 @@ const serverConfig = {
   compress: true,
   open: false,
   port: 9000,
+  host: '0.0.0.0',
   historyApiFallback: {
     verbose: true,
     disableDotRule: true
