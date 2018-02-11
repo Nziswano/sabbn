@@ -1,18 +1,29 @@
 import * as functions from 'firebase-functions';
-
-// // Start writing Firebase Functions
-// // https://firebase.google.com/docs/functions/typescript
-//
+import * as nodemailer from 'nodemailer';
 
 const Store = "earlyAdopters/{adopter}";
 
-exports.createUser = functions.firestore
-  .document(Store)
-  .onCreate(event => {
-    const newValue = event.data.data();
+const gmailEmail = functions.config().gmail.email;
+const gmailPassword = functions.config().gmail.password;
 
-    const name = newValue.name;
-    const email = newValue.email;
-
-    console.log(name, email);
+const mailTransport = nodemailer.createTransport({
+  service: 'gmail',
+  auth: {
+    user: gmailEmail,
+    pass: gmailPassword,
+  },
 });
+
+
+exports.createUser = functions.firestore.document(Store).onCreate(
+  (event) => {
+    const newValue = event.data.data();
+    const mailOptions = {
+      from: '"Sabbn" <developer@sabbn.co.za>',
+      to: newValue.email,
+    };
+    return mailTransport.sendMail(mailOptions)
+    .then(() => console.log(`Email sent to ${newValue.email}`))
+    .catch((error) => console.error("was an error sending an email", error))
+  }
+  );
