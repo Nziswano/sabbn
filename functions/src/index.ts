@@ -21,6 +21,8 @@ exports.createUser = functions.firestore.document(Store).onCreate(
     const mailOptions = {
       from: '"Sabbn" <developer@sabbn.co.za>',
       to: newValue.email,
+      subject: "Thank you for signing up",
+      html: `<p>Thank you for signing up. Name: ${newValue.name} - Email: ${newValue.email} </p>`,
     };
     return mailTransport.sendMail(mailOptions)
     .then(() => console.log(`Email sent to ${newValue.email}`))
